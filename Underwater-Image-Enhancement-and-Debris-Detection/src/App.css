@@ -1,0 +1,235 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+  margin:0;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:48px;
+  
+}
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size:14px;
+  color: #333333;
+}
+
+.header {
+  /* position:relative; */
+  text-align:center;
+  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  color:white;
+}
+.headerNew {
+  /* position:relative; */
+  text-align:center;
+  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  color:white;
+  height: 70px;
+}
+.logo {
+  width:50px;
+  fill:white;
+  padding-right:15px;
+  display:inline-block;
+  vertical-align: middle;
+}
+.containerWrapper{
+  width: 400px;
+  height: 470px;
+  background-color: #ffffff;
+  border-radius: 5px; 
+  margin:0 30px;
+  margin-top: 100px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+.inner-header {
+  height:65vh;
+ 
+  margin: 0;
+  padding-top: 50px;
+}
+img{
+  width: 350px;
+  object-fit: cover
+}
+.containerName{
+  font-family: 'Lato', sans-serif;
+  font-weight:700;
+  color: black
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px;
+  min-height:100px;
+  max-height:150px;
+}
+
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: white;
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+}
+.uploadButton {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 500px;
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: .3s;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  min-width: 160px;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: 700;
+  text-align: center;
+  padding: 16px 14px 18px;
+  color: white;
+  box-shadow: inset 0 0 0 2px white;
+  background-color: transparent;
+  height: 48px;
+}
+
+.uploadButton:hover {
+  color: #306ABB;
+  background-color: white;
+}
+.uploadButtonWrapper{
+  /* margin-top: 5px;  */
+  display:block;
+  position: absolute;
+  top:50vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.fileUpload{
+  display:none;
+}
+.cupWrapper{
+  position: fixed;
+  left:0;
+  right:0;
+  top:0;
+  bottom: 0;
+  display: flex;
+  background-color: rgba(0,0,0,0.4);
+  /* background-color:white; */
+}
+
+
+.cup {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 180px;
+  /* border: 6px solid #262626; */
+  border-top: 2px solid transparent;
+  border-radius: 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: url(https://image.ibb.co/fmHm66/wave.png);
+  background-position: 0px 350px;
+  background-repeat: repeat-x;
+  animation: filling 8s ease-in-out infinite;
+  box-shadow: 0 0 0 6px #fff, 0 20px 35px rgba(0,0,0,1);
+}
+
+.cup:before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 80px;
+  border: 6px solid #fff;
+  right: -70px;
+  top: 30px;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+@keyframes filling {
+  50% {background-position: 3000px 0px;}
+  100% {background-position: 6000px 350px;}
+}
+.backIcon{
+  /* width: 20px; */
+  padding: 2px;
+  padding-top: 4px;
+  color: #4253B9;
+}
+.backButton {
+  position: fixed; 
+  top: 15px; 
+  left: 20px;
+  display: block;
+  background-color: white;
+  /* border: thin solid #4F46E5; */
+  border: none;
+  font-size: x-large;
+  cursor: pointer;
+  border-radius: 50px;
+}
+.backButton:hover {
+  background-color: #f0f0f0; 
+}
